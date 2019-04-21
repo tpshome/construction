@@ -335,55 +335,32 @@
       </a>
     </main>
 
-    <!-- JS Global Compulsory -->
+    <!-- JS -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
-    <script src="assets/vendor/popper.js/popper.min.js"></script>
     <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
-
-    <!-- JS Implementing Plugins -->
-    <script src="assets/vendor/appear.js"></script>
-    <script src="assets/vendor/cubeportfolio-full/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-    <script src="assets/vendor/slick-carousel/slick/slick.js"></script>
-    <script  src="assets/vendor/fancybox/jquery.fancybox.min.js"></script>
-
-    <!-- JS Unify -->
     <script src="assets/js/hs.core.js"></script>
-    <script src="assets/js/compressed.js"></script>
+    <script src="assets/js/combined.min.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>
       $(document).on('ready', function () {
-        // initialization of carousel
         $.HSCore.components.HSCarousel.init('.js-carousel');
-
-        // initialization of header
         $.HSCore.components.HSHeader.init($('#js-header'));
         $.HSCore.helpers.HSHamburgers.init('.hamburger');
-
-        // initialization of HSScrollNav component
         $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
           duration: 700
         });
-
-        // initialization of tabs
         $.HSCore.components.HSTabs.init('[role="tablist"]');
-
-        // initialization of go to section
         $.HSCore.components.HSGoTo.init('.js-go-to');
       });
-
-
       $(window).on('load', function() {
         // initialization of cubeportfolio
         $.HSCore.components.HSCubeportfolio.init('.cbp');
       });
-      
       $(document).on('ready', function () {
         // initialization of popups
         $.HSCore.components.HSPopup.init('.js-fancybox');
       });
-
       $(window).on('resize', function () {
         setTimeout(function () {
           $.HSCore.components.HSTabs.init('[role="tablist"]');
