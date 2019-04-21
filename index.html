@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/vendor/animate.css">
     <link rel="stylesheet" href="assets/vendor/cubeportfolio-full/cubeportfolio/css/cubeportfolio.min.css">
     <link rel="stylesheet" href="assets/vendor/slick-carousel/slick/slick.css">
+    <link  rel="stylesheet" href="assets/vendor/fancybox/jquery.fancybox.min.css">
 
     <!-- CSS Template -->
     <link rel="stylesheet" href="assets/css/styles.op-construction.css">
@@ -44,7 +45,7 @@
               <!-- Logo -->
               <a href="#" class="js-go-to navbar-brand u-header__logo"
                  data-type="static">
-                <img class="u-header__logo-img u-header__logo-img--main g-width-140" src="assets/img/logo.png" alt="Image description">
+                <img class="u-header__logo-img u-header__logo-img--main g-width-140" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAApcAAADUCAMAAAD+4fhIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMBQTFRF1er3zuX3OIjJTXe7a4jFjsjsqdXvl6nWytPq8PP5WbLjo7PbOHO5uMjkabbkiqLS4+j1X4PB////LpvWLqTc5fL61Nvu8/n8M5TRb7vot9vzd5zNgZjNr7zgfcHpAAAAoNDvQK7jOm+2YLbmKqvhVKzgLangiIiIu7u7IiIiZmZm3d3d7u7uERERMzMzREREzMzMmZmZd3d3qqqqVVVVxs7pNXzAnLfaa5PIdpDJdLvmqMDfUoG/YLjn2eLxw+D1D5SBswAAEvhJREFUeNrs3Wlb2zgXBmAgQMo2FLOEUtqA+7ayEzu240Cn7Uz7///Vy55Y1u4j2zDP+dSrMUaRbiRrsbQWIBD9izVkAQIuEQi4RMAlAgGXCLhEIOASgYBLBFwiEHCJ+K+5PL3Y5uMUGYnw6nL0/Sh8jsHHs/oPjLa+CuInZCI8uhwtVT7EQY3lz6/iWEdeIry5/F5lGQ7ec9d/lrD8uosaE+HN5YBzGf7iLv8qjS1kJsKXS55l+L36+Zbc5VdkJqIrlz8VLjHkhOjK5Ve4RMAlAi7hEgGXCARcIuASgYBLBFzCJaIjl//wLg/gEtG9ywOO5T8juER07zI4rC4n+h3AJaIHLoOz738/x+GvUQCXiF64VAdcIuASAZftu9zcfHmO3dzcPBx+evce5YFwcqlaf2n7IkUoiM3L4TsUCsLWpWK9+m5A4PIhjg4PdlAycGlzOeH7PaEqjvbOUDhw2bzC3B2RurwfPD0ETbg0DNn74w6v6Yb6ONpDgw6XZjC3RSw/O7w9HhrFJfpBcGkm8w+/PdGF054GoWEcfUIxwWV7ERrH4I3JnDK2GD8FYwwKX6nLdmSysSxSxhLu4mg8Vl2usBbNaz8Qs2nT9LCxQUROqZ+MTWMacN9tXvuL5H7X9JW7vJP5rjuX9zErjV0+Xl8If0k5E1++yJulh85lLfU2LpOY/59qZNWPy+DVuwzDzfdduhyPs6mNy7uyrVPLM/nlk6RJeohdrqbexiV/54z7q+T+GIO34DIMhztduhynuZXLcRoFymLhW/OoQXrIXS5Tb+WSb8krrQZXm6aJvcvR2kr0xaXfxlxftCuPQyYlyz8+zXXXl+7poXf5cnc7l4HCHjNtxWUu1//i5hhH/XAZhoc7Hbocz+xcrlxvdv/COT0eXD7f3dJlLu36cJ2eiXV/fLuVXVedXHqsMk2KtrAr2VVohcn1uWt6fLh8urulS75ZyCWdnjixdSlanPGzLy7vnjI7dBlbluyyQsuNrl8tLKv0eHE5c3LJteSZ5A+ztB6/3GpnNbqry3BzpzOXL0VrWLLL2mJmdv3EMT1eXD6m3tplLqzTuU7PxH5cfVfkcrt+3c3hkaih/fvXyK/LcHDWmcu5ZckyWSvOHpCwTFK2tunx45I5ueQS89T1mVu04mKXX41c/j6Su/nl16Wf6R8mKMOEzcQDcpFQXxAxiZtYNnIXxbIK0yo9TAxQNudkmXrp7I9kvmZWv8t0bJVCZ5cH6m6zX5deHjIlRVstiFRdsnf5H4sAFmPZ9UHCSUuc0kPiUpZ6a5d5/XEg04Gncfm7uZtGLsPLtlxyVV2iKVmOYCbqilaLe5qK72WVHiKX4tRbu+SSM+Pvq2vF3V3+o3Nz5tll+GOnJZdMVBLykk0EJZsoZ42Z2IJVeqhcJjQuuZa84Do9UeDJ5YGWzUffLsOjnXZcRnYuA8HjYqlsHZNU2JBbpYfKZaDrNBu6rD5OphO7VtzZ5Uc9m5Fvl9QwiVzmgk/m6pG7hXBoqROXuVyslUvVAEEceHM50Ks58+6SGKZZu6l9vmQCg5m4ZyP+EeaSHoNxoomJS6Yb+zZ1qRiwzf25NEBz4N8lLUyjfoa2P16KusupurqIDIYkNekhcilMvZvLqW7ItSOX31twSdorlzjIhBOL4pIt+OFFJnhoyzRFOHFJD4VLWerdXMqSFAf/AZeUMEUOIpY2me95muqY6joTxkPl0vQ0calJvavLIHNuxV+/S8IBdqOpvNKqZMuAzKUmPT5cCldWWLjkBmbldfBbdBl+atNlalWyTD8s09BlGvhzKRZk4VKUqFng7lK4nmjd1tSwJZdkiziYTVlF7hdTumT+XEoqNhuXgpY8b+ByXcDyr6CvLsPBTmsul09c+pJdeV3HWzueJr5cxrIhUCuXtZbc+F154bLKLe169T65DH+05rI0LtkZ0/a3ZZN/C5f00Lqcyf1YueTXq8yCRi6D7V3N9kO9chnuteSSmZYs15PVTTrnBuNEmvRQulS9p2jpkmvJo4Yu7/5/NU5dTLXoMjxrxSULzGucSaXENOPqpcF8jyY9TeYhdalv4tLycq3L5qbadEnyiMlsnrhqXZloMZavfJ3ZzEMWLulpOD+uTD1cOsehb5f8E5egi13Ii5Zg3YYmPY3XbRSGMOHSKm48upzVt6kSDv1wL6iubIdRKjs+1XVuqVN6mq8nkqceLhu05P7WbRiXLP8Sz3JVtnpdcCFenWmVHoJ1btLUw2Wn85HNXZbSHrDqPYrE8j0KXy7lqYfLBvG+e5e1+Y1cMo7HFJMiSVcu5amHyy5H1wlc8ptqZJI6caXGnM5s3tP16lKaerjssutD4LK2B0Ak7cQ87mtQ1DYNmFK41L3AYJt6uGwQmz1wyU8IL6uc2GhpmXwfmDZcylP/hlzetO2y6Yo3Cpc1H0UgaSQlcpIuXcpT/1pcHvXivTPasSISl/yDZGwnJw86dSlP/StxOSRAEvaswiRxWZs3KQLZ05sgiqBbl4rUvw6X7wnGE8OeVZg0LhXD0xMrlp241A+u99ultsJsvJKi/S45kcvIdTFaGgXdu4x0C3l77lLzhNn85Yb2u+RELvnh6dXVjJGiV76YBj1wqUr9q3A5+uj3nZv2J32oXE5VVQ5LJWsxombpIXM51VSYfXcZBAeyPd0GFOfstP86OZXL2nNktTRKwWPmPGqaHjKXmtS/Apd3vZ+D73exN6zEHsGSM2eXg1dxXnm+cm5pxlgeIEhd+oyu3yZHwCWhy00UKVz20GX4HmUKlz10uYcyhcseujxCmcJlD12iIYfLXrpEjxwu++jyBwoVLnvocoBChcseugzfoVThsocuhyhVuOyhS0z5wGUfXeIBEy776BIjmHDZS5cHKFa47KFLdHzgso8u0fGByz66RMcHLvvoMkSxwmUfXZ6hXOGyhy5vUK7/JZejdZvQ3vlGGd2fM4V4JS7X/2cTH3zWiBgogku4RMBlH3YORrwql3/gEtFDl1dwiYBLuIRLuETAZd9dThlb7o83Z+xtFHXJXjbfnDEWEd7ZQ37BJR/5XLBxZO0AW6P9Jp/LXnUMfcoq5bhQHCT5GKKzzGPNIRJ36c3qGxSX9atsvpVVfsFlM5d5JimNuSeXj/XXy47/peSwyGUCRXB1LiWpjcvGLk3zCy4buVQUTJz7c3kn8/nu1X2udVVaaeKyTKW/Nps2c2mcX3DZxOWCokCcXL6cRjHXNOSVZjwNDFzOlVtb501cLmwafLh0dak5YCedenT5fPdqO53ySUyEjaXKZab5tbm7S4v8wnyPu8tS29j6dPl890zZkDPhsX0Kl5n2MADXvzar/PLp8o3Pjyf6I28Lny6f7l4ouw8LYbnLXc71vzZzdGmVX6/b5e1GLW65K86Pvz3GyfnGvsTloVNWVEGw+2okmssqAB8uH+9ePTs0VTXjTOuyNP97sP5WVvnl0+Wad5cb3+pxcr7kt3FS/ex4n3CdWyZqIfNUfN6tD5dPd59IT9jlnSU6l4nRqefLM82svpVVfvl0GXTi8k7mU525f1z/aIPOpfh4eskRTF5cMsHVc3nPbNlZl7mspfJhmidh8ZjgW1nl11t0+QRTwPIubqne75lK8jMTUqA4HC1i4rHoWN4UpuI+kcQlf5z4QlIxpi7fyi6/vLr80JHLb8f3H56Lze4T7YAZSTSUwjKnObRvGotGK5m0KYwkj54Sl9xp4hPpw3Th8K3s8utturyvFW+XFI+PV54zN4jeH68OHGZ5pasxZ48xpXXJ8cgENVHl8rmkhZe4XCg6Iau3mpcO38ouv7y6vGrP5fFxBd/5SnV5/tAvP6nUpQT7bSS1tQfMeMLS2WUiHLHJZJxiSUUqdpmoDiB9auMXrHD8Vnb55dXlRXsueaZh+PJ0uS+6lGBYfSZafSD7i6c6fFfY0BaStRu5kddY3HnP+MktASSrb2WVX15drrfscmnx28q/n3o6J9Kej9vwpbQzOmH+XObiT1Lx9Ux2m9jgGZhZZ0FEmF9eXQZtu9wQuTx5HE+/H3O/C7ptDaaKKRFmsfDIZuyEiScd5+I+7Uy2BE7scmE9lGj1razyy6/LLx26PK+MtW/c0h9IoSwVbqUrjctSskgjFzbkU+kIjNjlTLkCpLFLq/zy63KrXZf7L231Sb2vLp+HdM6MzHyyl8BlwWZjGdiZqBpl0gUdYpex9ZSgnUub/PLrcrtVl7fnq/3x/RPlFCXJyaXqjM4SEpf66UDu9gtB6qrVn9ilsttD4dIiv/y6XOtq/PJ+kPJW9gFNt8egYGaJT5elbBAmFfzf3NblwodL8/zy6zK47sbl46TOxoloKmifdNv/PDNbUEjvstpVWNTFFvJejIHLiReXxvnl2eXnblw+dXJuRTPk5/xNdpr1BKOFCR5yl1wPtqxXjgt5gXfn0jS/PLu86MTl+cryS+3KjaOgcbBM+wxI7DKujRWmfENeWYTBrF1mvlya5Zdnl6cduKyuZdvfOD9RVpg0mwwypq4ASF3OmIZIztegSa9cGuSXZ5cWI5hELo8Fo0G3G5Vq09fm6gWLpU9MhC7FdcqUb8gnik5MR+NEFvnl2+VWSy5vn4IX+fw/+xuShpz2kJSE8e9eJ43nIQVlPdWMWc24hr00cpmpx9XT+l4wVt/KKr98u1xrdb5nJY6POYXnYpeHAXHMhau1m82P1/oKghtw3e9cZUzscqIE8pAoVtK6lOaXb5fBblcu+RHLfbFL+jNS5qJZjKbrNgotTK6fM1e8JGm0bqOUfK1JQetSnF/eXV515PJ8ZUpSca1zM/60kPXxEalShokPl3y1ktaXVUwqDflMtQRD7DJXvvG7wn7B7F1a5pd3l6cduVx+9DT5KF4Y7NwbzwxnU6hcBlwfIU6UPxUp+xKS9eqqN34L0WcW38oyv7y7NH6ZgtjlyvT4ycbt7crczwbJ2eNzaRc5oX++rI2cCzu6q+UbK8deJC4n8iGb6hu8C3uXlvnl3+VFNy7lc5Q+dnJbSD9JqFzWFj3kpqM2ianLSP4LFmPtiiVNO26XX/5dms6RU7sMj5VzlE3nxnPZK62Fwfilk8ucX36jHMJUrsCQvT9eXUiXlhKWLu/pWuZXCy6vOnK5f6JdUNRk8HIm2gIgKBbCV7zNdgCIlS5r26HVHCy06440LkvhOvKcH2S029cgdsmvFlyOOnIpWrZxckt2MKRRmby8VEjhcppqKkzh7kKihefS/Ykyk2Ra7gMTu+RXCy4N53zoXd59fszNnFfnKAdNlhIlqUE2TwJCl7WbFKrFG6oaSOpyavKlWODyrezyqw2Xp95c7t9K5h9Xlm1snB8/hOAVn2ZLNgqDmmVK6pIv2lgzdyJ9f0y+z6DBhm62u3rGLvnVhkuzCrP9/S8HDVdeLiyWlJO4rBVtoe5cSDsSin1ZmY0dq29llV+tuDztp8umK9y0u/KxgNildnB9ZrZwTLWPtWaz6bH1PtaxS3614tKowmzdZdPqsraNlSqbiVxGmpJkBoOXQZN9/1P7ff9jl/xqx+XpdQ9dEiwIns4UJVgG9C75DjO/FjMxGLwMGpyTMnM4JyV2ya92XJqMYbbtkmbhJZOV4TwJfLicauqYhdETm+ZcqURSZaaFy1hZ7JJfLbkc7fbO5UFAE4Xgcd7xHD4Dl7XHv6lyCFOya4bBOXwzk7c37F2a5ldLLg3OTNG63OztGboRY8vMfjPnlhZs+Z7DhPRLecgvV5f6ZUXtuhy8DxBvKJxdars+Wpc/etbpQbwFl9q9irQuh4Qsj1CScGnWkmtdHhC6PENJwqVZS651uUPHcg8FCZeGfXKty+Coj31xxKt3qZ6OvNb++KfeTEAi3pTLkXJXGP3PD2hcvkMxwqX5I6b+x2/wcInw4VJ5csq6/scpWvJLFCJc1uKikcvg0wAjlwgPLhV9nyuTHz/TzUZuDi+VLNHngUs7mFtmP38jnY88uty7P7FZNS80+I0ihEtxfHAewHyKnU+X3FDm5ubw08sh4gqXA8zzwKV0tOhf5w75Ks6b5+Bb5iFYwiUlzHWaJA7BEi4pYV75dQmWcKmDKTzX54tXl2AJl4698lOPLtETh0tXmFf+XGLcEi7NQjDzs+vN5Q+whEvTW9UXcVx4cnmIgoNL4zj910uFWXM5+IRyg8tGD5nbHlweoccDl5bxh2vLr0fkLg/xaAmX1jHiZss/E7scHKDM4NIltq+Juz5D9MPhkqLKrEz+XK/RuRzgTR64bBDru5SPmC8uhyOUF1w2iquVxvzLiMTlJXbGgsvmjfmKzIYwH1xuogmHS5I43SJ6xhxCJVz6qTOvm/TKh1AJl8QyL557QFvosyB64/K+b/7UnF//QWYj+uPyvtJ8XM/xYR3ZjeiPy/s+0PZnyET0zuV9rfln667a/HKB50xEn1w+2rz6sLv1BzQRvXL5iHN9ew35juibSwQCLhFwiUDAJQIuEQi4RCDgEgGXCARcIuASgYBLxFuP/wswAD3d89lmKXbNAAAAAElFTkSuQmCC" alt="Image description">
               </a>
               <!-- End Logo -->
 
@@ -130,99 +131,143 @@
       <!-- Section Content -->
       <section id="examples" class="container-fluid px-0">
         <div class="row no-gutters">
-          <div class="col-md-6">
-            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/building.jpg);">
-              <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/building.jpg" alt="Image description">
 
-              <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
-                <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Home Refurbishments</h3>
-                <p class="g-color-white-opacity-0_7 g-mb-30">Whether you are refurbishing a single room or an entire house, TPS can handle the job.</p>
-                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="#">
-                  <i class="fa fa-arrow-right g-color-primary mr-2"></i>
-                  See more
-                </a>
+          <div class="col-md-6"style="padding-left: 0px; padding-right: 0px;">
+            <a class="js-fancybox" href="javascript:;" data-fancybox="lightbox-gallery-hidden" data-src="assets/img/bg/building.jpg" data-caption="Image Description 2" data-speed="500" data-slideshow-speed="1000">
+              <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/building.jpg);">
+                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/building.jpg" alt="Image description">
+  
+                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
+                  <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Home Refurbishment - Gallery</h3>
+                  <p class="g-color-white-opacity-0_7 g-mb-30">Whether you are refurbishing a single room or an entire house, TPS can handle the job.</p>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
 
-          <div class="col-md-6">
-            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/reconstruction.jpg);">
-              <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/reconstruction.jpg" alt="Image description">
+          <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox-gallery-hidden" data-src="assets/img/home/1.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+          <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox-gallery-hidden" data-src="assets/img/home/2.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+          <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox-gallery-hidden" data-src="assets/img/home/3.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+          <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox-gallery-hidden" data-src="assets/img/home/4.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+          <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox-gallery-hidden" data-src="assets/img/home/5.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+          <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox-gallery-hidden" data-src="assets/img/home/6.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+          <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox-gallery-hidden" data-src="assets/img/home/7.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
 
-              <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
-                <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Garage Conversions</h3>
-                <p class="g-color-white-opacity-0_7 g-mb-30">Make more space in your home with a professional garage conversion by TPS.</p>
-                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="#">
-                  <i class="fa fa-arrow-right g-color-primary mr-2"></i>
-                  See more
+          <div class="col-md-6"style="padding-left: 0px; padding-right: 0px;">
+            <a class="js-fancybox" href="javascript:;" data-fancybox="lightbox1-gallery-hidden" data-src="assets/img/bg/reconstruction.jpg" data-caption="Image Description 2" data-speed="500" data-slideshow-speed="1000">
+              <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/reconstruction.jpg);">
+                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/reconstruction.jpg" alt="Image description">
+  
+                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
+                  <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Garage Conversion - Gallery</h3>
+                  <p class="g-color-white-opacity-0_7 g-mb-30">Make more space in your home with a professional garage conversion by TPS.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox1-gallery-hidden" data-src="assets/img/garage/1.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+          <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox1-gallery-hidden" data-src="assets/img/garage/2.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+          <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox1-gallery-hidden" data-src="assets/img/garage/3.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+          <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox1-gallery-hidden" data-src="assets/img/garage/4.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+        
+        </div>
+
+
+        <div class="row no-gutters">
+
+            <div class="col-md-6"style="padding-left: 0px; padding-right: 0px;">
+                <a class="js-fancybox" href="javascript:;" data-fancybox="lightbox2-gallery-hidden" data-src="assets/img/bg/kitchen.jpg" data-caption="Image Description 2" data-speed="500" data-slideshow-speed="1000">
+                  <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/kitchen.jpg);">
+                    <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/kitchen.jpg" alt="Image description">
+      
+                    <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
+                      <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Kitchen Installation - Gallery</h3>
+                      <p class="g-color-white-opacity-0_7 g-mb-30">Trust TPS to manage the complete installation of your dream kitchen.</p>
+                    </div>
+                  </div>
                 </a>
               </div>
-            </div>
-          </div>
+
+              <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox2-gallery-hidden" data-src="assets/img/kitchen/1.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+              <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox2-gallery-hidden" data-src="assets/img/kitchen/2.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+              <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox2-gallery-hidden" data-src="assets/img/kitchen/3.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+              <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox2-gallery-hidden" data-src="assets/img/kitchen/4.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+
+              <div class="col-md-6"style="padding-left: 0px; padding-right: 0px;">
+                  <a class="js-fancybox" href="javascript:;" data-fancybox="lightbox3-gallery-hidden" data-src="assets/img/bg/bathroom.jpg" data-caption="Image Description 2" data-speed="500" data-slideshow-speed="1000">
+                    <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/bathroom.jpg);">
+                      <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/bathroom.jpg" alt="Image description">
+        
+                      <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
+                        <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Bathroom Fitting - Gallery</h3>
+                        <p class="g-color-white-opacity-0_7 g-mb-30">Soak and relax in your new professionally fitted bathroom.</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+  
+                <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox3-gallery-hidden" data-src="assets/img/bathroom/1.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+                <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox3-gallery-hidden" data-src="assets/img/bathroom/2.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+                <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox3-gallery-hidden" data-src="assets/img/bathroom/3.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+                <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox3-gallery-hidden" data-src="assets/img/bathroom/4.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+                <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox3-gallery-hidden" data-src="assets/img/bathroom/6.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+                <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox3-gallery-hidden" data-src="assets/img/bathroom/8.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+                <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox3-gallery-hidden" data-src="assets/img/bathroom/9.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+                <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox3-gallery-hidden" data-src="assets/img/bathroom/10.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+                <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox3-gallery-hidden" data-src="assets/img/bathroom/11.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+                <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox3-gallery-hidden" data-src="assets/img/bathroom/12.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+    
         </div>
 
         <div class="row no-gutters">
-          <div class="col-md-6">
-            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/kitchen.jpg);">
-              <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/kitchen.jpg" alt="Image description">
 
-              <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
-                <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Kitchen Installation</h3>
-                <p class="g-color-white-opacity-0_7 g-mb-30">Trust TPS to manage the complete installation of your dream kitchen.</p>
-                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="#">
-                  <i class="fa fa-arrow-right g-color-primary mr-2"></i>
-                  See more
-                </a>
-              </div>
+          <div class="col-md-6"style="padding-left: 0px; padding-right: 0px;">
+              <a class="js-fancybox" href="javascript:;" data-fancybox="lightbox4-gallery-hidden" data-src="assets/img/bg/painting.jpg" data-caption="Image Description 2" data-speed="500" data-slideshow-speed="1000">
+                <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/painting.jpg);">
+                  <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/painting.jpg" alt="Image description">
+    
+                  <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
+                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Painting and Decorating - Gallery</h3>
+                    <p class="g-color-white-opacity-0_7 g-mb-30">You pick the decor and colour, then let TPS do the rest.</p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </div>
 
-          <div class="col-md-6">
-            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/bathroom.jpg);">
-              <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/bathroom.jpg" alt="Image description">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox4-gallery-hidden" data-src="assets/img/decor/2.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox4-gallery-hidden" data-src="assets/img/decor/1.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox4-gallery-hidden" data-src="assets/img/decor/3.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox4-gallery-hidden" data-src="assets/img/decor/4.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox4-gallery-hidden" data-src="assets/img/decor/5.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox4-gallery-hidden" data-src="assets/img/decor/6.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox4-gallery-hidden" data-src="assets/img/decor/7.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox4-gallery-hidden" data-src="assets/img/decor/8.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox4-gallery-hidden" data-src="assets/img/decor/9.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
 
-              <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
-                <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Bathroom Fitting</h3>
-                <p class="g-color-white-opacity-0_7 g-mb-30">Soak and relax in your new professionally fitted bathroom.</p>
-                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="#">
-                  <i class="fa fa-arrow-right g-color-primary mr-2"></i>
-                  See more
-                </a>
-              </div>
+          <div class="col-md-6"style="padding-left: 0px; padding-right: 0px;">
+              <a class="js-fancybox" href="javascript:;" data-fancybox="lightbox5-gallery-hidden" data-src="assets/img/bg/plastering.jpg" data-caption="Image Description 2" data-speed="500" data-slideshow-speed="1000">
+                <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/plastering.jpg);">
+                  <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/plastering.jpg" alt="Image description">
+    
+                  <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
+                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Plastering - Gallery</h3>
+                    <p class="g-color-white-opacity-0_7 g-mb-30">With almost 25 years combined experience, you can trust TPS with all your plastering needs.</p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </div>
-        </div>
 
-        <div class="row no-gutters">
-          <div class="col-md-6">
-            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/painting.jpg);">
-              <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/painting.jpg" alt="Image description">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox5-gallery-hidden" data-src="assets/img/plaster/1.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox5-gallery-hidden" data-src="assets/img/plaster/2.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox5-gallery-hidden" data-src="assets/img/plaster/3.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox5-gallery-hidden" data-src="assets/img/plaster/5.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox5-gallery-hidden" data-src="assets/img/plaster/4.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox5-gallery-hidden" data-src="assets/img/plaster/6.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox5-gallery-hidden" data-src="assets/img/plaster/7.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox5-gallery-hidden" data-src="assets/img/plaster/8.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
+            <img class="js-fancybox g-hidden-xs-up" data-fancybox="lightbox5-gallery-hidden" data-src="assets/img/plaster/9.jpg" data-caption="Image Description 4" data-speed="500" data-slideshow-speed="1000">
 
-              <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
-                <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Painting and Decorating</h3>
-                <p class="g-color-white-opacity-0_7 g-mb-30">You pick the decor and colour, then let TPS do the rest.</p>
-                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="#">
-                  <i class="fa fa-arrow-right g-color-primary mr-2"></i>
-                  See more
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url(assets/img/bg/plastering.jpg);">
-              <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="assets/img/bg/plastering.jpg" alt="Image description">
-
-              <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x">
-                <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Plastering</h3>
-                <p class="g-color-white-opacity-0_7 g-mb-30">With almost 25 years combined experience, you can trust TPS with all your plastering needs.</p>
-                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="#">
-                  <i class="fa fa-arrow-right g-color-primary mr-2"></i>
-                  See more
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       <!-- End Section Content -->
@@ -312,6 +357,7 @@
     <script src="assets/vendor/appear.js"></script>
     <script src="assets/vendor/cubeportfolio-full/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
     <script src="assets/vendor/slick-carousel/slick/slick.js"></script>
+    <script  src="assets/vendor/fancybox/jquery.fancybox.min.js"></script>
 
     <!-- JS Unify -->
     <script src="assets/js/hs.core.js"></script>
@@ -323,6 +369,7 @@
     <script src="assets/js/components/hs.cubeportfolio.js"></script>
     <script src="assets/js/components/hs.carousel.js"></script>
     <script src="assets/js/components/hs.go-to.js"></script>
+    <script  src="assets/js/components/hs.popup.js"></script>
 
     <!-- JS Customization -->
     <script src="assets/js/custom.js"></script>
@@ -353,6 +400,11 @@
       $(window).on('load', function() {
         // initialization of cubeportfolio
         $.HSCore.components.HSCubeportfolio.init('.cbp');
+      });
+      
+      $(document).on('ready', function () {
+        // initialization of popups
+        $.HSCore.components.HSPopup.init('.js-fancybox');
       });
 
       $(window).on('resize', function () {
